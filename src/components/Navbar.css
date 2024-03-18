@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 9vh;
+}
+
+.nav .left {
+    width: 20%;
+    position: absolute;
+    left: 20px;
+}
+
+.nav .left ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav .left ul li {
+    list-style: none;
+}
+
+.nav .left ul li a {
+    color: purple;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.nav .mid ul li a {
+    color: purple;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.nav .right ul li a {
+    color: purple;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.nav .mid {
+    position: absolute;
+    left: 33%;
+    width: 70%;
+}
+
+.nav .mid ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav .mid ul li {
+    list-style: none;
+    margin: 0 22px;
+
+}
+
+.nav .right {
+    position: absolute;
+    right: 20px;
+    width: 10%;
+}
+
+.nav .right ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav .right ul li {
+    list-style: none;
+}
+.toggler{
+    position: absolute;
+    right: 40px;
+}
+.toggler i{
+    font-size: 1.8rem;
+    color: purple;
+}
+
+.drop-menu{
+    background-color: white;
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    border: none;
+    box-shadow: 2px 2px 3px rgba(128, 0, 128, 0.247);
+    border-radius: 8px;
+    width: 250px;
+    height: 0;
+    transition: height 0.5s ease;
+    overflow: hidden;
+}
+.drop-menu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.drop-menu ul li{
+    list-style: none;
+    margin: 8px 0;
+}
+.drop-menu ul li a{
+    text-decoration: none;
+    color: purple;
+    font-size: 1.2rem;
+
+}
+.toggler{
+    display: none;
+}
+.drop-menu{
+    display: none;
+}
+.drop-menu.active{
+    border: 1px solid purple;
+    height: 230px;
+    
+}
+@media (max-width: 992px){
+    .nav .left{
+        width: 30%;
+    }
+    .nav .left ul li a{
+        font-size: 1.5rem;
+    }
+    .nav .mid,
+    .nav .right{
+        display: none;
+    }
+    .toggler{
+       display: block;
+    }
+    .drop-menu{
+        left: 30%;
+        display: block;
+    }
+}
+@media (max-width: 768px){
+    .nav .left ul li a{
+        font-size: 1.4rem;
+    }
+  
+}
+@media (max-width: 768px){
+    .nav .left ul li a{
+        font-size: 1.2rem;
+    }
+  
+}
